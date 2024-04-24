@@ -1,0 +1,14 @@
+# Data Manipulation and Analysis
+pandas>=2.2.2
+numpy>=1.26.4
+
+# Visualization Libraries
+matplotlib>=3.8.4
+seaborn>= 0.13.2
+
+# Dashboard Development
+streamlit>=1.33.0
+
+# Miscellaneous Tools
+os
+
