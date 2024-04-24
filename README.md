@@ -4,7 +4,7 @@ This project involves exploratory data analysis (EDA) on solar radiation data co
 
 ## Code Overview
 
-- The code is written in Python and relies on several libraries for data manipulation and visualization, including `pandas`, `numpy`, `seaborn`, and `matplotlib`.
+- The code is written in Python and relies on several libraries for data manipulation and visualization, including `pandas`, `numpy`, `seaborn`, and `matplotlib` .
 - The code is structured to load CSV data files, clean them, and perform EDA on each dataset.
 - The EDA process includes calculating summary statistics, creating time-series visualizations, correlation heatmaps, histograms, scatter plots, and box plots.
 
