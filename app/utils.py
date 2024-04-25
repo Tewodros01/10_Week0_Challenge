@@ -7,7 +7,7 @@ import streamlit as st
 def clean_data(data):
     data = data.replace([np.inf, -np.inf], np.nan)
 
-    # Coerce invalid timestamps to NaN and handle them accordingly
+    # Coerce invalid timestamps to NaN
     if 'Timestamp' in data.columns:
         data['Timestamp'] = pd.to_datetime(data['Timestamp'], errors='coerce')
         most_common_date = (
@@ -27,7 +27,7 @@ def clean_data(data):
 def get_summary_stats(data):
     return data.describe()
 
-# Function to generate a line plot with explicit figure creation
+# Function to generate a line plot
 def generate_line_plot(data, x, y, title):
     fig, ax = plt.subplots(figsize=(12, 6))
     sns.lineplot(data=data, x=x, y=y, ax=ax)
@@ -37,7 +37,7 @@ def generate_line_plot(data, x, y, title):
     st.pyplot(fig)
 
 
-# Function to generate a scatter plot with explicit figure creation
+# Function to generate a scatter plot
 def generate_scatter_plot(data, x, y, title, hue=None):
     fig, ax = plt.subplots(figsize=(12, 6))
     sns.scatterplot(data=data, x=x, y=y, hue=hue, ax=ax)
@@ -47,7 +47,7 @@ def generate_scatter_plot(data, x, y, title, hue=None):
     st.pyplot(fig)
 
 
-# Function to generate a box plot with explicit figure creation
+# Function to generate a box plot
 def generate_box_plot(data, column, title):
     fig, ax = plt.subplots(figsize=(12, 6))
     sns.boxplot(data=data, x=column, ax=ax)
@@ -55,7 +55,7 @@ def generate_box_plot(data, column, title):
     st.pyplot(fig)
 
 
-# Function to generate a histogram with explicit figure creation
+# Function to generate a histogram
 def generate_histogram(data, column, title):
     fig, ax = plt.subplots(figsize=(12, 6))
     sns.histplot(data[column], kde=True, ax=ax)

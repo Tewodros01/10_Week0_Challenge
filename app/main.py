@@ -3,18 +3,28 @@ import pandas as pd
 import numpy as np
 import utils
 
+# Title and description
 st.title("Data Visualization Dashboard")
 st.markdown("This dashboard allows you to visualize data with various interactive features.")
 
-# Load and clean data
-data = pd.read_csv("benin-malanville.csv")
-data = utils.clean_data(data)
+# List of available datasets
+datasets = {
+    "Benin (Malanville)": "./data/benin-malanville.csv",
+    "Sierra Leone (Bumbuna)": "./data/sierraleone-bumbuna.csv",
+    "Togo (Dapaong QC)": "./data/togo-dapaong_qc.csv"
+}
 
-# Sidebar for interactive plot type selection
+# Sidebar for selecting dataset and plot type
 st.sidebar.header("Customize the Dashboard")
+selected_dataset = st.sidebar.selectbox("Select Dataset", list(datasets.keys()))
 plot_type = st.sidebar.selectbox("Select Plot Type", ["Line Plot", "Scatter Plot", "Box Plot", "Histogram"])
 
-# Interactive plot settings
+# Load and clean the selected dataset
+data_path = datasets[selected_dataset]
+data = pd.read_csv(data_path)
+data = utils.clean_data(data)
+
+#  plot settings
 x_column = st.sidebar.selectbox("X-Axis", data.columns)
 y_column = st.sidebar.selectbox("Y-Axis", data.columns)
 
