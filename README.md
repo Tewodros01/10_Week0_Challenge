@@ -55,7 +55,7 @@ To run the code, follow these steps:
 2. Navigate to the project directory::
 
    ```bash
-   cd <project-directory>
+   cd 10_Week0_Challenge_Data_Analysis
    ```
 
 3. Install the required Python packages::
