@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import utils
 
-# Title and description
+
 st.title("Data Visualization Dashboard")
 st.markdown("This dashboard allows you to visualize data with various interactive features.")
 

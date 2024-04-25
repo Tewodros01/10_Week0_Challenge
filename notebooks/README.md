@@ -1,37 +1,35 @@
-Solar Radiation Data Analysis
-Project Overview
-This project involves exploratory data analysis (EDA) on solar radiation data collected from various locations. The objective is to gain insights into weather patterns, solar energy generation, and related factors through statistical analysis and visualizations. This project uses Python libraries like Pandas, Seaborn, and Matplotlib to perform data cleaning and EDA.
+# Exploratory Data Analysis of Solar Radiation Data
 
-Project Structure
-data/: Contains the source CSV files used for analysis.
-notebooks/: Contains Jupyter Notebooks for performing data analysis.
-results/: Stores visualizations and output files generated during analysis.
-README.md: This document, providing an overview of the project.
-Code Overview
-The primary notebook in this project includes:
+This project involves exploratory data analysis (EDA) on solar radiation data collected from various locations, with the objective of cleaning, analyzing, and visualizing the data. The analysis includes summary statistics, data quality checks, correlation analysis, time series analysis, and various visualizations.
 
-Data Loading: Loading data from CSV files and handling errors.
-Data Cleaning: Removing duplicates, handling missing values, and converting invalid data.
-Exploratory Data Analysis:
-Summary statistics
-Time-series analysis
-Correlation analysis
-Wind analysis
-Temperature analysis
-Various visualizations (scatter plots, box plots, etc.)
-Usage Instructions
-To run the Jupyter Notebook and perform the EDA:
+## Code Overview
 
-Ensure you have Python 3.x installed.
-Install the required libraries: pandas, seaborn, matplotlib, and numpy.
-Clone this repository and navigate to the project directory.
-Start Jupyter Notebook with the following command:
+- The code is written in Python and relies on several libraries for data manipulation and visualization, including `pandas`, `numpy`, `seaborn`, and `matplotlib` .
+- The code is structured to load CSV data files, clean them, and perform EDA on each dataset.
+- The EDA process includes calculating summary statistics, creating time-series visualizations, correlation heatmaps, histograms, scatter plots, and box plots.
 
-Visualizations
-During the EDA, various visualizations are generated, including:
+## Functions
 
-Time-series plots of solar radiation and temperature data.
-Correlation heatmaps showing relationships between variables.
-Box plots, scatter plots, and histograms for additional insights.
-Error Handling
-The code includes error handling to manage issues like missing files, parsing errors, and invalid data formats. If you encounter errors, check the CSV files for anomalies or corrupted data.
+- **`clean_data(data)`**: Cleans the data by handling missing values, duplicates, and invalid data. It converts infinite values to NaN, imputes missing numeric values with the column mean, removes duplicates, and handles entirely null columns.
+- **`perform_eda(data, location_name)`**: Performs exploratory data analysis on the dataset for a specific location. This includes:
+
+  - Summary statistics
+  - Data quality checks
+  - Time series analysis
+  - Correlation analysis
+  - Wind analysis
+  - Temperature analysis
+  - Histograms, box plots, and scatter plots
+
+- **`load_csv_data(file_path)`**: Loads CSV data from a specified file path with error handling to check for file existence and parsing issues.
+
+## Requirements
+
+To run this project, ensure you have the following packages installed:
+
+- `pandas`
+- `numpy`
+- `seaborn`
+- `matplotlib`
+
+Ensure your Python environment is set up with these packages before executing the code.

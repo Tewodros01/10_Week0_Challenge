@@ -7,7 +7,6 @@ import streamlit as st
 def clean_data(data):
     data = data.replace([np.inf, -np.inf], np.nan)
 
-    # Coerce invalid timestamps to NaN
     if 'Timestamp' in data.columns:
         data['Timestamp'] = pd.to_datetime(data['Timestamp'], errors='coerce')
         most_common_date = (
@@ -16,7 +15,6 @@ def clean_data(data):
         data['Timestamp'] = data['Timestamp'].fillna(most_common_date)
         data.set_index('Timestamp', drop=False, inplace=True)
 
-    # Impute missing values in numeric columns with the median
     numeric_columns = data.select_dtypes(include=[np.number]).columns
     data[numeric_columns] = data[numeric_columns].apply(lambda x: x.fillna(x.median()))
 
