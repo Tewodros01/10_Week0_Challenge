@@ -1,4 +1,4 @@
-# Exploratory Data Analysis of Solar Radiation Data
+# Data Analysis of Solar Radiation Data
 
 This project involves exploratory data analysis (EDA) on solar radiation data collected from various locations, with the objective of cleaning, analyzing, and visualizing the data. The analysis includes summary statistics, data quality checks, correlation analysis, time series analysis, and various visualizations.
 
