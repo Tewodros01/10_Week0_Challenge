@@ -13,12 +13,10 @@ datasets = {
     "Togo (Dapaong QC)": "./data/togo-dapaong_qc.csv"
 }
 
-# Sidebar for selecting dataset and plot type
 st.sidebar.header("Customize the Dashboard")
 selected_dataset = st.sidebar.selectbox("Select Dataset", list(datasets.keys()))
 plot_type = st.sidebar.selectbox("Select Plot Type", ["Line Plot", "Scatter Plot", "Box Plot", "Histogram"])
 
-# Load and clean the selected dataset
 data_path = datasets[selected_dataset]
 data = pd.read_csv(data_path)
 data = utils.clean_data(data)
