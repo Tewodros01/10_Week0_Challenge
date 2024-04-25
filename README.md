@@ -49,13 +49,13 @@ To run the code, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Tewodros01/10_Week0_Challenge_Data_Analysis.git
    ```
 
 2. Navigate to the project directory::
 
    ```bash
-   cd <project-directory>
+   cd 10_Week0_Challenge_Data_Analysis
    ```
 
 3. Install the required Python packages::
