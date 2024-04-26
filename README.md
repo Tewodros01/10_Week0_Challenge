@@ -1,67 +1,33 @@
-# Exploratory Data Analysis of Solar Radiation Data
+# Solar Radiation Data Analysis and Visualization Dashboard
 
-This project involves exploratory data analysis (EDA) on solar radiation data collected from various locations, with the objective of cleaning, analyzing, and visualizing the data. The analysis includes summary statistics, data quality checks, correlation analysis, time series analysis, and various visualizations.
+This project comprises two tasks: Task One focuses on data cleaning and exploratory data analysis (EDA), while Task Two involves building an interactive data visualization dashboard. The primary goal is to analyze solar radiation data from multiple locations and visualize it interactively using Streamlit.
 
-## Code Overview
+## Task One: Data Cleaning and Exploratory Data Analysis
 
-- The code is written in Python and relies on several libraries for data manipulation and visualization, including `pandas`, `numpy`, `seaborn`, and `matplotlib` .
-- The code is structured to load CSV data files, clean them, and perform EDA on each dataset.
-- The EDA process includes calculating summary statistics, creating time-series visualizations, correlation heatmaps, histograms, scatter plots, and box plots.
+### Overview
 
-## Functions
+Task One provides an exploratory data analysis pipeline for solar radiation datasets. The code handles data cleaning, including addressing missing values, removing duplicates, and providing summary statistics. Additionally, various visualizations are created to understand the data better.
 
-- **`clean_data(data)`**: Cleans the data by handling missing values, duplicates, and invalid data. It converts infinite values to NaN, imputes missing numeric values with the column mean, removes duplicates, and handles entirely null columns.
-- **`perform_eda(data, location_name)`**: Performs exploratory data analysis on the dataset for a specific location. This includes:
+### Data Sources
 
-  - Summary statistics
-  - Data quality checks
-  - Time series analysis
-  - Correlation analysis
-  - Wind analysis
-  - Temperature analysis
-  - Histograms, box plots, and scatter plots
+The datasets used for analysis represent solar radiation data from three locations:
 
-- **`load_csv_data(file_path)`**: Loads CSV data from a specified file path with error handling to check for file existence and parsing issues.
+- Benin (Malanville)
+- Sierra Leone (Bumbuna)
+- Togo (Dapaong)
 
-## Requirements
+## Task Two: Interactive Data Visualization Dashboard
 
-To run this project, ensure you have the following packages installed:
+## Overview
 
-- `pandas`
-- `numpy`
-- `seaborn`
-- `matplotlib`
-- `os`
+Task Two creates an interactive data visualization dashboard using Streamlit. The dashboard allows users to select different plot types, columns for analysis, and visualize summary statistics. It integrates various plot functions from Task One with interactive controls.
 
-Ensure your Python environment is set up with these packages before executing the code.
+# Setup Instructions
 
-## How to Run
+- pip install jupyter notebook
+- pip install streamlit
+- pip install panadas
 
-To execute the code and perform EDA:
+# Author:
 
-1. Clone the project repository and navigate to the code directory.
-2. Ensure the necessary CSV data files are available in the same directory as the script.
-
-## Instructions
-
-To run the code, follow these steps:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Tewodros01/10_Week0_Challenge_Data_Analysis.git
-   ```
-
-2. Navigate to the project directory::
-
-   ```bash
-   cd 10_Week0_Challenge_Data_Analysis
-   ```
-
-3. Install the required Python packages::
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4 .You can use Jupyter notebooks
+- Tewodros Misawoy
